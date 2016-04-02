@@ -1,0 +1,212 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400);
+@import "variables.less";
+body,
+html {
+  font-family: "Lato";
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 0px 30px 40px 30px;
+  position: relative;
+}
+body:before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  border: 20px solid #000000;
+  border: 20px solid #333;
+}
+.bio {
+  width: 250px;
+  position: fixed;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  top: 30px;
+}
+.bio .bio-pic {
+  height: 125px;
+  width: 125px;
+  display: inline-block;
+  background: #eee no-repeat center;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  background-image: url(images/adam-bio.png);
+  background-size: cover;
+  position: relative;
+}
+.bio .location {
+  padding: 15px;
+  padding-top: 10px;
+  display: inline-block;
+  position: relative;
+  margin-top: 22px;
+}
+.bio .location:before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  border-top: solid 1px #DDD;
+  width: 50%;
+  left: 25%;
+}
+.bio .location .current {
+  margin-top: 3px;
+}
+.bio .location .fa {
+  display: block;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: -14px;
+  text-indent: -27px;
+  font-size: 22px;
+  color: #666;
+}
+.bio .name {
+  font-size: 33px;
+  font-family: "Lato";
+  margin: 0 auto 8px auto;
+  padding: 0;
+  position: relative;
+  top: -8px;
+  opacity: .55;
+}
+.bio .name:after {
+  position: absolute;
+  bottom: 0px;
+  width: 30%;
+  left: 35%;
+  border-bottom: solid 2px #DDD;
+}
+.bio .bio-text p {
+  opacity: .6;
+  margin: 0 0 15px 0;
+  padding: 0 20px;
+  line-height: 18px;
+  text-align: center;
+}
+.bio .info {
+  margin-top: 50px;
+}
+.bio .info a {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #2683c4;
+  margin: 0 auto 10px auto;
+  opacity: .8;
+  position: relative;
+  margin-bottom: 26px;
+  transition: opacity .1s ease-out;
+  font-weight: 400;
+  padding: 4px;
+}
+.bio .info a:hover {
+  opacity: 1;
+}
+.bio .info a:after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  width: 30px;
+  height: 1px;
+  left: calc(50% - 15px);
+  background: #DDD;
+}
+.bio .info a:last-child:after {
+  display: none;
+}
+.bio .info .main-cta {
+  color: white;
+  width: 100px;
+  background: #2683c4;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-bottom: solid 2px #1969a1;
+}
+.bio .info .main-cta:hover {
+  opacity: .9;
+}
+.site-wrapper {
+  width: 900px;
+  overflow: auto;
+  margin: 0 auto;
+  position: relative;
+}
+.site-wrapper .photos {
+  width: 600px;
+  float: right;
+}
+.site-wrapper .photos .photo {
+  background: #efefef;
+  margin-bottom: 40px;
+  background-size: cover;
+}
+.site-wrapper .photos .photo img {
+  width: 100%;
+}
+.site-wrapper .photos .photo:last-child {
+  margin-bottom: 0px;
+}
+.site-wrapper .photos .landscape {
+  background-image: url(images/landscape.jpg);
+}
+.site-wrapper .photos .portrait {
+  background-image: url(images/portrait.jpg);
+}
+@media only screen and (max-width: 900px) {
+  body {
+    padding: 0;
+  }
+  .site-wrapper {
+    width: 90%;
+    padding-top: 30px;
+  }
+  .site-wrapper .bio {
+    width: 100%;
+    position: static;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    top: 30px;
+    margin-bottom: 30px;
+  }
+  .site-wrapper .bio-text {
+    display: none;
+  }
+  .site-wrapper .location {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .site-wrapper .info {
+    margin-top: 0px;
+  }
+  .site-wrapper .info a {
+    display: inline;
+    font-size: 20px;
+    margin: 0 15px;
+  }
+  .site-wrapper .info a .text {
+    display: none;
+  }
+  .site-wrapper .info a:after {
+    display: none;
+  }
+  .site-wrapper .photos {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .site-wrapper .photos .photo {
+    margin-bottom: 20px;
+  }
+  .site-wrapper .photos .photo img {
+    max-width: 100%;
+  }
+}
