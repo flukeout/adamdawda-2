@@ -17,6 +17,9 @@
       };
     </script>
     <script src="less.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+    <script src="app.js"></script>
+
     <meta name="viewport" content="width=320, user-scalable=no">
     <title>Adam Dawda Photography</title>
     <link rel="icon" type="image/png" href="images/favicon.png?2" sizes="64x64">
@@ -24,96 +27,63 @@
 
   <body>
 
-    <div class="video-wrapper">
+    <header>
+      <div class="inner-wrapper">
+        <a href="#" class="name">ADAM DAWDA</a>
 
-        <div class="name">ADAM DAWDA</div>
-      <video autoplay  loop >
-        <source src="videos/trees.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="site-wrapper">
-      <div class="bio">
-        <div class="name">ADAM DAWDA</div>
-
-        <div class="bio-pic"></div>
-
-        <div class="location">
-          <i class="fa fa-map-marker"></i>
-          <div class="home">Based in </i> Vancouver, Canada</div>
-          <div class="current">Currently in </i> Winnipeg, Canada</div>
+        <div class="contact-icons">
+          <a class="instagram" href="https://instagram.com/adamdawda/"><i class="fa fa-instagram"></i></a>
+          <a class="email-me" href="mailto:adamdawda@gmail.com"><i class="fa fa-envelope"></i></a>
         </div>
 
-        <div class="info">
-          <a class="email-me" href="mailto:adamdawda@gmail.com"><i class="fa fa-envelope"></i> <span class="text">adamdawda@gmail.com</span></a>
-          <a class="twitter" href="https://twitter.com/adamdawda89"><i class="fa fa-twitter"></i> <span class="text">@adamdawda89</span></a>
-          <a class="instagram" href="https://instagram.com/adamdawda/"><i class="fa fa-instagram"></i> <span class="text">@adamdawda</span></a>
-        </div>
+        <nav>
+          <a class="selected" href="#">PORTRAITS</a>
+          <a href="#">VIDEO</a>
+          <a href="#">PERSONAL</a>
+          <a href="#">CONTACT</a>
+        </nav>
+
+      </div>
+    </header>
+
+    <div class="site-wrapper"></div>
+
+  <section class="popup-viewer">
+    <div class="inner-wrapper">
+
+      <div class="close-popup">
       </div>
 
-      <div class="photos">
-        <div class="photo">
-          <img src="photos/1.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/2.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/3.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/4.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/5.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/6.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/7.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/8.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/9.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/10.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/11.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/12.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/13.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/14.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/15.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/16.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/17.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/18.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/19.jpg" />
-        </div>
-        <div class="photo">
-          <img src="photos/20.jpg" />
-        </div>
+      <div class="story-description">
+        <h1>Alex the Sk8r Girl</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non tristique ante, bibendum tincidunt libero. Praesent in maximus massa. Donec viverra augue turpis, quis lobortis magna bibendum nec.
+        </p>
       </div>
+
+      <div class="image-wrapper">
+        <div class="image">
+          <!-- <div class="progress">
+            <div class="dot current"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div> -->
+          <div direction="next" class="next-photo"></div>
+          <div direction="previous" class="previous-photo"></div>
+          <div class="image-flex">
+            <img src="photos/alex/Alex2.jpg"/>
+          </div>
+          <div class="progress">
+            <div class="dot current"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
+  </section>
 
   </body>
 </html>
