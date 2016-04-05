@@ -13,21 +13,19 @@ body {
   margin: 0;
   position: relative;
 
-  &:before {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-sizing: border-box;
-    border: 20px solid rgba(0,0,0,1);
-    border: 20px solid #333;
+  &.no-scroll {
+    overflow: hidden;
   }
+
+
 }
 
 header {
   background: #3c3f42;
   color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 
   .name {
     float: left;
@@ -98,15 +96,10 @@ header {
 
 
   .photo-wrapper {
-
-    margin: 0 5px;
-    // max-height: 200px;
-    // background: #efefef;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding: 0 5px;
 
     &:hover:not(.story-description) {
       cursor: pointer;
@@ -122,7 +115,7 @@ header {
   }
 
   .story-description {
-    min-width: 180px;
+    // min-width: 180px;
     display: block;
 
     h1 {
@@ -143,7 +136,6 @@ header {
     }
   }
 
-
   .landscape {
     flex: 2.25;
   }
@@ -151,16 +143,17 @@ header {
 
 .popup-viewer {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 59px;
   left: 0;
   bottom: 0;
   width: 100%;
   padding: 20px 0;
-  background: rgba(255,255,255,.97);
-  height: ~"calc(100% - 59px)";
+  background: rgba(255,255,255,1);
+  // height: ~"calc(100% - 59px)";
   z-index: 999999;
   transition: opacity .3s ease-out;
+  opacity: 1;
 
   &.close {
     opacity: 0;
@@ -282,7 +275,7 @@ header {
   margin: 0 auto;
   position: relative;
   max-width: 100%;
-  padding: 50px 0 50px 0;
+  padding: 90px 0 50px 0;
 }
 
 @media only screen and (max-width: 900px) {
