@@ -43,8 +43,27 @@ var stories = {
 
 var popupOpen = false;
 
+
+
 $(document).on("ready",function(){
   loadStories();
+
+  $(window).on("keydown",function(e){
+    if(e.keyCode == 37) {
+      if(popupOpen){
+        changeImage("previous");
+      }
+    }
+    if(e.keyCode == 39) {
+      if(popupOpen){
+        changeImage("next");
+      }
+    }
+
+    if(e.keyCode == 27) {
+      closePopup();
+    }
+  });
 
   $(window).on("scroll",function(e){
     if(popupOpen){
