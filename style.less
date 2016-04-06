@@ -16,8 +16,6 @@ body {
   &.no-scroll {
     overflow: hidden;
   }
-
-
 }
 
 header {
@@ -28,11 +26,9 @@ header {
   z-index: 2;
 
   .inner-wrapper {
-    max-width: 1000px;
     padding: 20px;
     margin: 0 auto;
   }
-
 
   .name {
     float: left;
@@ -60,15 +56,15 @@ header {
 
   nav {
     margin: 0 auto;
-    width: 400px;
-    text-align: center;
+    // text-align: center;
+    padding-left: 210px;
     position: relative;
-    top: -3px;
+    top: -5px;
 
     a {
       color: white;
       border: none;
-      font-weight: bold;
+      // font-weight: bold;
       text-decoration: none;
       opacity: .5;
       font-size: 14px;
@@ -76,8 +72,8 @@ header {
 
       &.selected {
         opacity: 1;
-        padding: 5px 0;
-        border-bottom: solid 2px white;
+        padding: 4px 0;
+        border-bottom: solid 1px white;
       }
 
       &:hover:not(.selected) {
@@ -92,16 +88,13 @@ header {
 }
 
 .story {
-  display: flex;
-  justify-content: center;
   margin: 0 0 40px 0;
+  text-align: center;
 
 
   .photo-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 5px;
+    display: inline-block;
+    margin: 5px;
 
     &:hover:not(.story-description) {
       cursor: pointer;
@@ -109,8 +102,6 @@ header {
     }
 
     img {
-      max-width: 100%;
-      max-height: 100%;
     }
 
 
@@ -118,7 +109,10 @@ header {
 
   .story-description {
     // min-width: 180px;
-    display: block;
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+
 
     h1 {
       font-weight: normal;
@@ -280,79 +274,26 @@ header {
   padding: 90px 0 50px 0;
 }
 
-@media only screen and (max-width: 900px) {
-  //
-  // body {
-  //   padding: 0;
-  //   margin: 0;
-  // }
-  //
-  // .site-wrapper {
-  //   width: 100%;
-  //   padding-top: 30px;
-  //   padding: 0;
-  //   box-sizing: border-box;
-  //
-  //   .bio {
-  //     display: block;
-  //     position: static;
-  //     margin: 25px auto 23px auto;
-  //     text-align: center;
-  //     color: #333;
-  //     font-size: 14px;
-  //     left: 10%;
-  //     width: 80%;
-  //   }
-  //
-  //   .bio-pic {
-  //     display: none;
-  //   }
-  //
-  //   .bio-text {
-  //     display: none;
-  //   }
-  //
-  //   .location {
-  //     display: block;
-  //     margin-bottom: 10px;
-  //   }
-  //
-  //   .info {
-  //     margin-top: 0px;
-  //
-  //     a {
-  //       display: inline;
-  //       font-size: 20px;
-  //       margin: 0 15px;
-  //
-  //       &.twitter {
-  //         font-size: 24px;
-  //         position: relative;
-  //         top: 1px;
-  //       }
-  //
-  //       .text {
-  //         display: none;
-  //       }
-  //
-  //       &:after {
-  //         display: none;
-  //       }
-  //     }
-  //   }
-  //
-  //   .photos {
-  //     float: none;
-  //     margin: 0 auto;
-  //     width: 100%;
-  //
-  //     .photo {
-  //       margin-bottom: 20px;
-  //     }
-  //
-  //     .photo img {
-  //       max-width: 100%;
-  //     }
-  //   }
-  // }
+@media only screen and (max-width: 700px) {
+
+  .site-wrapper {
+    padding: 130px 0 50px 0;
+  }
+
+  header {
+    .name {
+     // font-size: 24px;
+    }
+  }
+
+  header nav {
+    padding-left: 0px;
+    padding-top: 5px;
+    clear: both;
+    text-align: left;
+
+    a:first-child {
+      margin-left: 0;
+    }
+  }
 }
